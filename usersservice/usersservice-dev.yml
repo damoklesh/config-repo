@@ -1,0 +1,46 @@
+spring:
+  datasource:
+    platform: postgres
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/usersDB
+    username: postgres
+    password: postgres
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate.ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+      
+logging:
+   level:
+      root: WARN
+      org.springframework.web: DEBUG
+      org.hibernate: ERROR
+
+server:
+   port: 8080
+
+management:
+  endpoint:
+    env:
+      enabled: true
+    health:
+      enabled: true
+    info:
+      enabled: true 
+    httptrace:
+      enabled: true
+    metrics:
+      enabled: true
+    mappings:
+      enabled: true
+    shutdown:
+      enabled: true
+    liquidbase:
+      enabled: true
+    refresh:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: env, health, info, httptrace, metrics, mappings, shutdown, liquidbase, refresh
