@@ -8,8 +8,9 @@ spring:
  jpa:
    database: POSTGRESQL
    show-sql: true
-   hibernate.ddl-auto: create-drop
+   hibernate.ddl-auto: none #create-drop
    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+   generate-ddl: false
 # liquibase:
 #   enabled: true
 #   change-log: /db/changelog/db-changelog-master.xml
