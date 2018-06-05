@@ -11,6 +11,7 @@ spring:
    hibernate.ddl-auto: none #create-drop
    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
    generate-ddl: false
+   properties.hibernate.jdbc.time_zone: UTC
  liquibase:
    enabled: true
    change-log: classpath:db/changelog/db.changelog-master.yaml
